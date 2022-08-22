@@ -1,0 +1,3 @@
+<launch>
+        <node pkg="om_service_call_examples" type="multiple_movements.py" name="ROS_Servos"/>    
+</launch>
