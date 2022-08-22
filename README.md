@@ -1,48 +1,56 @@
-# om_service_call_examples
-###### Example code for using ROS service calls with Open Manipulator-X
+# OpenManipulator
+<img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/openmanipulator_x/OpenManipulator.png">
+<img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/openmanipulator_x/OpenManipulator_Chain_Capture.png" width="500">
 
-This package is designed to provide some example code to help getting started using the Open Manipulator-X with ROS and Gazebo. All coding is done in Python.
+[![kinetic-devel Status](https://github.com/ROBOTIS-GIT/open_manipulator/workflows/kinetic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/open_manipulator/tree/kinetic-devel)
 
-## System Setup
-###### Hardware
-Intel NUC, OpenCR development board and Open Manipulator-X with XM430-W350-t motors
+[![melodic-devel Status](https://github.com/ROBOTIS-GIT/open_manipulator/workflows/melodic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/open_manipulator/tree/melodic-devel)
 
-###### Software
-- Intel Nuc is running Ubuntu 16.04 LTS
-- Have installed all ROS packages as stated in Open Manipulator-X eManual
-- OpenCR is running usb_to_dxl
-- Dynamixel motors setup as per Open Manipulator-X eManual
+[![noetic-devel Status](https://github.com/ROBOTIS-GIT/open_manipulator/workflows/noetic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/open_manipulator/tree/noetic-devel)
 
-*Note*  
-If using OpenCR, USB port address may need to be changed in open_manipulator_controller.launch from USB0 to ACM0.  
+## ROBOTIS e-Manual for OpenManipulator
+- [ROBOTIS e-Manual for OpenManipulator](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
 
-## Codes
-###### single_movement.py
-This code will call the **/goal_joint_space_path** service and use it to make the Open Manipulator-X perfrom 1 movement.
-###### multiple_movements.py
-This code functions the same as single_movement.py, except it will perform multiple movements (3 instead of 1)
-###### gripper_movement.py
-This code will call the **/goal_tool_control** service and use it to control the position of the gripper.
+## Wiki for open_manipulator Packages
+- http://wiki.ros.org/open_manipulator (metapackage)
+- http://wiki.ros.org/open_manipulator_control_gui
+- http://wiki.ros.org/open_manipulator_controller
+- http://wiki.ros.org/open_manipulator_description
+- http://wiki.ros.org/open_manipulator_libs
+- http://wiki.ros.org/open_manipulator_moveit
+- http://wiki.ros.org/open_manipulator_teleop
 
-## YouTube Links
-The following links will provide video of the Open Manipulator-X being used in both hardware and simulation using service calls and the open_manipulator_controller package.  
+## Open Source related to OpenManipulator
+- [robotis_manipulator](https://github.com/ROBOTIS-GIT/robotis_manipulator)
+- [open_manipulator](https://github.com/ROBOTIS-GIT/open_manipulator)
+- [open_manipulator_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_msgs)
+- [open_manipulator_simulations](https://github.com/ROBOTIS-GIT/open_manipulator_simulations)
+- [open_manipulator_perceptions](https://github.com/ROBOTIS-GIT/open_manipulator_perceptions)
+- [open_manipulator_processing](https://github.com/ROBOTIS-GIT/open_manipulator_processing)
+- [open_manipulator_friends](https://github.com/ROBOTIS-GIT/open_manipulator_friends)
+- [open_manipulator_with_tb3](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3)
+- [open_manipulator_with_tb3_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3_msgs)
+- [open_manipulator_with_tb3_simulations](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3_simulations)
+- [turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3)
+- [turtlebot3_msgs](https://github.com/ROBOTIS-GIT/turtlebot3_msgs)
+- [turtlebot3_simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations)
+- [turtlebot3_applications](https://github.com/ROBOTIS-GIT/turtlebot3_applications)
+- [turtlebot3_applications_msgs](https://github.com/ROBOTIS-GIT/turtlebot3_applications_msgs)
+- [turtlebot3_autorace](https://github.com/ROBOTIS-GIT/turtlebot3_autorace)
+- [turtlebot3_deliver](https://github.com/ROBOTIS-GIT/turtlebot3_deliver)
+- [hls_lfcd_lds_driver](https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver)
+- [manipulator_h](https://github.com/ROBOTIS-GIT/ROBOTIS-MANIPULATOR-H)
+- [dynamixel_sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK)
+- [dynamixel_workbench](https://github.com/ROBOTIS-GIT/dynamixel-workbench)
+- [OpenCR-Hardware](https://github.com/ROBOTIS-GIT/OpenCR-Hardware)
+- [OpenCR](https://github.com/ROBOTIS-GIT/OpenCR)
 
-###### Open Manipulator-X. ROS. Service Calls. Implementation on physical hardware.  
-https://www.youtube.com/watch?v=8JTLWg_CjYg  
-
-###### Open Manipulator-X. ROS. Gazebo. Service Calls. Example implementation.  
-https://www.youtube.com/watch?v=IuSqCRb4uYA&t=36s  
-
-## Execution
-###### Simulation with Gazebo
-roslaunch open_manipulator_controller open_manipulator_controller.launch use_platform:=false  
-roslaunch open_manipulastor_gazebo open_manipulator_gazebo.launch  
-rosrun om_service_call_examples single_movement.py  
-  
-*Additional Commands*  
-roslaunch open_manipulator_control_gui open_manipulator_control_gui.launch  
-rosservice call /controller_manager/list_controllers [TAB]+[TAB]  
-
-###### Running on Real Open Manipulator-X
-roslaunch open_manipulator_controller open_manipulator_controller.launch  
-rosrun om_service_call_examples single_movement.py  
+## Documents and Videos related to OpenManipulator
+- [ROBOTIS e-Manual for OpenManipulator](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
+- [ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)
+- [ROBOTIS e-Manual for ROBOTIS MANIPULATOR-H](http://emanual.robotis.com/docs/en/platform/manipulator_h/introduction/)
+- [ROBOTIS e-Manual for Dynamixel SDK](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/)
+- [ROBOTIS e-Manual for Dynamixel Workbench](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/)
+- [e-Book for TurtleBot3 and OpenManipulator](https://community.robotsource.org/t/download-the-ros-robot-programming-book-for-free/51/)
+- [Videos for OpenManipulator](https://www.youtube.com/playlist?list=PLRG6WP3c31_WpEsB6_Rdt3KhiopXQlUkb)
+- [Videos for TurtleBot3 and OpenManipulator](https://www.youtube.com/playlist?list=PLRG6WP3c31_XI3wlvHlx2Mp8BYqgqDURU)
